@@ -8,4 +8,9 @@ Make file contains commands needed.
 
 * `make test` Runs tests
 
+<<<<<<< HEAD
+=======
+* `make test-acceptance` Runs acceptance tests
+
+>>>>>>> 76b0aed (Test commit)
 * `make run` Runs the program
