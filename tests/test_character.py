@@ -23,7 +23,16 @@ class TestCharacterInitWithName(TestCase):
         test_character.enter_map(testmap)
         self.assertEqual(start_position, test_character.current_position)
 
-
-    def test_move(direction):
+    def test_move_count_increment(self):
         pass
+
+    def test_move_north(self):
+        test_character = Character("Sir Robyn")
+        test_character.current_position = {5,5}
+        test_character.move_count=8
+        expected_position={5,6}
+        expected_move_count=9
+        test_character.move("n")
+        self.assertEqual(expected_move_count, test_character.move_count)
+        self.assertEqual(expected_position, test_character.current_position)
 
