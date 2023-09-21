@@ -1,7 +1,7 @@
 class Position:
-    xPos = -2
+    xPos = -1
     yPos = -1
-    coordinates = {"x":-1,"y":-1}
+    coordinates = {"x":xPos,"y":yPos}
 
     def __init__(self, x, y):
         self.xPos = x
