@@ -1,5 +1,6 @@
 from unittest import TestCase
 from levelup.character import Character
+from levelup.gamemap import GameMap
 
 class TestCharacterInitWithName(TestCase):
     def test_init(self):
@@ -17,7 +18,7 @@ class TestCharacterInitWithName(TestCase):
     def test_enter_map(self):
         test_character = Character("Trogdor")
         start_position = {0,0}
-        testmap = gamemap()
+        testmap = GameMap(100)
         testmap.startingPosition = start_position
         test_character.enter_map(testmap)
         self.assertEqual(start_position, test_character.current_position)
