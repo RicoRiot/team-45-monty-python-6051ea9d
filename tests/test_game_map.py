@@ -1,7 +1,6 @@
 from unittest import TestCase
-from levelup.gamemap import Map
+import GameMap
 
 class TestGameMap(TestCase):
     self.assertEqual(numPositions, 100)
 
-    
