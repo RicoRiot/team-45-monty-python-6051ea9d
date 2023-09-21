@@ -7,3 +7,6 @@ class TestGameMap(TestCase):
         self.assertEqual(100, gm.numPositions)
         
 
+    def test_getPositions(self):
+        gm = GameMap(100)
+        self.assertEqual(list([10][10]), gm.get_positions())
