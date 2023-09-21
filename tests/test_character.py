@@ -9,7 +9,7 @@ class TestCharacterInitWithName(TestCase):
         self.assertEqual(ARBITRARY_NAME, testobj.name)
 
     def test_get_position(self):
-        expected_position = {4, 7}
+        expected_position = [4, 7]
         testobj = Character("Trogdor")
         testobj.current_position=expected_position
         actual_position=testobj.get_position()
@@ -17,7 +17,7 @@ class TestCharacterInitWithName(TestCase):
         
     def test_enter_map(self):
         test_character = Character("Trogdor")
-        start_position = {0,0}
+        start_position = [0,0]
         testmap = GameMap(100)
         testmap.startingPosition = start_position
         test_character.enter_map(testmap)
