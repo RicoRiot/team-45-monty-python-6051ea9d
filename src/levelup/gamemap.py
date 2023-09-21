@@ -3,3 +3,5 @@ class GameMap:
 
     def __init__(self, positions):
         self.numPositions = positions
+
+    

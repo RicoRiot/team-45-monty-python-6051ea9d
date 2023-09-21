@@ -1,6 +1,9 @@
 from unittest import TestCase
-import GameMap
+from levelup.gamemap import GameMap
 
 class TestGameMap(TestCase):
-    self.assertEqual(numPositions, 100)
+    def test_init(self):
+        gm = GameMap(100)
+        self.assertEqual(100, gm.numPositions)
+        
 
