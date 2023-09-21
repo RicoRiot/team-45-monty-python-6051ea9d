@@ -7,3 +7,6 @@ class Character:
 
     def get_position(self):
         return self.current_position
+
+    def enter_map(self, m):
+        self.current_position = m.startingPosition

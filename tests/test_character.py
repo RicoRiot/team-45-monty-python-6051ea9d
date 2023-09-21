@@ -14,3 +14,15 @@ class TestCharacterInitWithName(TestCase):
         actual_position=testobj.get_position()
         self.assertEqual(expected_position, actual_position)
         
+    def test_enter_map(self):
+        test_character = Character("Trogdor")
+        start_position = {0,0}
+        testmap = gamemap()
+        testmap.startingPosition = start_position
+        test_character.enter_map(testmap)
+        self.assertEqual(start_position, test_character.current_position)
+
+
+    def test_move(direction):
+        pass
+
