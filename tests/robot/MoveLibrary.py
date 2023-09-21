@@ -4,6 +4,7 @@ from levelup.controller import Direction
 class MoveLibrary:
     start_x: int
     start_y: int
+    start_count: int
 
     controller = GameController()
 
