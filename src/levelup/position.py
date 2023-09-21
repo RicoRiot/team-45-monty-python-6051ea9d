@@ -1,5 +1,5 @@
 class Position:
-    xPos = -1
+    xPos = -2
     yPos = -1
     coordinates = {"x":-1,"y":-1}
 
