@@ -6,4 +6,4 @@ class Position:
     def __init__(self, x, y):
         self.xPos = x
         self.yPos = y
-        self.coodinates = {"x":xPos,"y":yPos}
+        self.coodinates = {"x":x,"y":y}
