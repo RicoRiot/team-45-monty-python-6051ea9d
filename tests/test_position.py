@@ -3,5 +3,5 @@ from levelup.position import Position
 
 class TestPosition(TestCase):
     def test_init(self):
-        coordubates = Position(0,0)
+        coordinates = Position(0,0)
         self.assertEqual(coordinates,{"x":0,"y":0})
