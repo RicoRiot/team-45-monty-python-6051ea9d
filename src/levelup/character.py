@@ -10,17 +10,18 @@ class Character:
     move_count=0
 
     def __init__(self, character_name):
-        name = character_name
-        move_count=0
+        self.name = character_name
+        self.move_count=0
 
     def get_position(self):
-        return current_position
+        return self.current_position
 
     def enter_map(self, m):
-        current_position = m.starting_position
+        self.current_position.x_pos = m.starting_position.x_pos
+        self.current_position.y_pos = m.starting_position.y_pos
 
     def move(self, DIRECTION):
-        current_position=GameMap.calculate_position(current_position.x_pos, current_position.y_pos, DIRECTION)
+        self.current_position=GameMap.calculate_position(self.current_position.x_pos, self.current_position.y_pos, DIRECTION)
         move_count+=1
 
 

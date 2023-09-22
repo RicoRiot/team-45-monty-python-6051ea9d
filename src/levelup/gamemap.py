@@ -3,7 +3,7 @@ from levelup.controller import Direction
 
 class GameMap:
     num_positions = 0
-   all_positions = list()
+    all_positions = list()
     starting_position = Position
 
     def __init__(self, positions):

@@ -22,7 +22,8 @@ class TestCharacterInitWithName(TestCase):
         testmap = GameMap(100)
         testmap.starting_position = start_position
         test_character.enter_map(testmap)
-        self.assertEqual(start_position, test_character.current_position)
+        self.assertEqual(start_position.x_pos, test_character.current_position.x_pos)
+        self.assertEqual(start_position.y_pos, test_character.current_position.y_pos)
 
     def test_move_count_increment(self):
         pass
@@ -37,5 +38,6 @@ class TestCharacterInitWithName(TestCase):
         expected_position=Position(expected_x_position, expected_y_position)
         expected_move_count=9
         test_character.move("n")
-        self.assertEqual(test_character.current_position, expected_position)
+        self.assertEqual(test_character.current_position.x_pos, expected_position.x_pos)
+        self.assertEqual(test_character.current_position.y_pos, expected_position.y_pos)
 
