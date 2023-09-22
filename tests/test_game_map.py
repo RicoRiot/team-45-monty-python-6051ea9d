@@ -6,41 +6,46 @@ from levelup.position import Position
 class TestGameMap(TestCase):
     def test_init(self):
         gm = GameMap(100)
-        self.assertEqual(100, gm.numPositions)
+        self.assertEqual(100, gm.num_positions)
         
 
     def test_getPositions(self):
         gm = GameMap(100)
         self.assertEqual(list(), gm.get_positions())
 
-    def test_calculatePositionNorth(self):
+    def test_calculate_position_north(self):
         gm = GameMap(100)
         
-        p2 = gm.calculatePosition(5,5, Direction.NORTH)
+        p2 = gm.calculate_position(5,5, Direction.NORTH)
         
         p=Position(5,6)
-        self.assertEqual(p2.yPos,p.yPos)
+        self.assertEqual(p2.y_pos,p.y_pos)
 
-    def test_calculatePositionSouth(self):
+    def test_calculate_position_south(self):
         gm = GameMap(100)
         
-        p2 = gm.calculatePosition(5,5, Direction.SOUTH)
+        p2 = gm.calculate_position(5,5, Direction.SOUTH)
         
         p=Position(5,4)
-        self.assertEqual(p2.yPos,p.yPos)
+        self.assertEqual(p2.y_pos,p.y_pos)
 
-    def test_calculatePositionEast(self):
+    def test_calculate_position_east(self):
         gm = GameMap(100)
         
-        p2 = gm.calculatePosition(5,5, Direction.EAST)
+        p2 = gm.calculate_position(5,5, Direction.EAST)
         
         p=Position(6,5)
-        self.assertEqual(p2.yPos,p.yPos)
+        self.assertEqual(p2.y_pos,p.y_pos)
 
-    def test_calculatePositionWest(self):
+    def test_calculate_position_west(self):
         gm = GameMap(100)
         
-        p2 = gm.calculatePosition(5,5, Direction.WEST)
+        p2 = gm.calculate_position(5,5, Direction.WEST)
         
         p=Position(4,5)
-        self.assertEqual(p2.yPos,p.yPos)
+        self.assertEqual(p2.y_pos,p.y_pos)
+
+
+    def test_is_position_valid (self):
+        gm = GameMap(100)
+        self.assertEqual(gm.is_position_valid(Postion(-1,-1)), false)
