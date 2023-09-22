@@ -1,7 +1,6 @@
 from unittest import TestCase
 from levelup.gamemap import GameMap
 from levelup.controller import Direction
-#from levelup.position import Position
 from levelup.position import Position
 
 class TestGameMap(TestCase):
