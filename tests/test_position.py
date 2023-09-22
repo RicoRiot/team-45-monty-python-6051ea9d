@@ -3,8 +3,9 @@ from levelup.position import Position
 
 class TestPosition(TestCase):
     def test_init(self):
-        test_coordinate=Position(0,0)
-        self.assertEqual({0,0},test_coordinate.coordinates )
+        test_x_pos = 0
+        test_y_pos = 0
+        test_position = Position(test_x_pos,test_y_pos)
 
-        test_coordinate = Position(3,4)
-        self.assertEqual({3,4}, test_coordinate.coordinates)
+        self.assertEqual(0,test_position.x_pos)
+        self.assertEqual(0,test_position.y_pos)
