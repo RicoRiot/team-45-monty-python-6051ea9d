@@ -9,7 +9,7 @@ class TestCharacterInitWithName(TestCase):
         self.assertEqual(ARBITRARY_NAME, testobj.name)
 
     def test_get_position(self):
-        expected_position = [4, 7]
+        expected_position = Position(4,7)
         testobj = Character("Trogdor")
         testobj.current_position=expected_position
         actual_position=testobj.get_position()
@@ -17,9 +17,9 @@ class TestCharacterInitWithName(TestCase):
         
     def test_enter_map(self):
         test_character = Character("Trogdor")
-        start_position = [0,0]
+        start_position = Position(0,0)
         testmap = GameMap(100)
-        testmap.startingPosition = start_position
+        testmap.starting_position = start_position
         test_character.enter_map(testmap)
         self.assertEqual(start_position, test_character.current_position)
 
@@ -28,11 +28,13 @@ class TestCharacterInitWithName(TestCase):
 
     def test_move_north(self):
         test_character = Character("Sir Robyn")
-        test_character.current_position = {5,5}
+        test_character.current_position.x_pos=5
+        test_character.current_position.y_pos=5
         test_character.move_count=8
-        expected_position={5,6}
+        expected_x_position=5
+        expected_y_position=6
+        expected_position=Position(expected_x_position, expected_y_position)
         expected_move_count=9
         test_character.move("n")
-        self.assertEqual(expected_move_count, test_character.move_count)
-        self.assertEqual(expected_position, test_character.current_position)
+        self.assertEqual(test_character.current_position, expected_position)
 
