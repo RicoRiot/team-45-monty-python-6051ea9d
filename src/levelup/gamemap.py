@@ -18,7 +18,7 @@ class GameMap:
         p=Position(x,y)
         #p = {starting_position.x_pos, starting_position.y_pos}
         print (move_direction)
-        if move_direction == "n": #Direction.NORTH:
+        if move_direction == Direction.NORTH:
             p.y_pos=p.y_pos+1
         elif move_direction ==Direction.SOUTH:
             p.y_pos=p.y_pos-1
