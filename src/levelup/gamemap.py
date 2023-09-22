@@ -3,7 +3,7 @@ from levelup.controller import Direction
 
 class GameMap:
     num_positions = 0
-    all_positions = list()
+   #all_positions = list()
     starting_position = Position
 
     def __init__(self, positions):
@@ -31,17 +31,17 @@ class GameMap:
 
         return(p)
 
-        def is_position_valid(self,pos):
-            if pos.x_pos>9:
-                return False
-            elif pos.x_pos<0:
-                return False
-            elif pos.y_pos>9:
-                return False
-            elif pos.y_pos<0:
-                return False
-            else:
-                return True
+    def is_position_valid(self,position_x, position_y):
+        if position_x>9:
+           return False
+        elif position_x<0:
+            return False
+        elif position_y>9:
+            return False
+        elif position_y<0:
+            return False
+        else:
+            return True
 
 
-        
+    

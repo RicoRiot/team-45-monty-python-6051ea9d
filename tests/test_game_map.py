@@ -1,6 +1,7 @@
 from unittest import TestCase
 from levelup.gamemap import GameMap
 from levelup.controller import Direction
+#from levelup.position import Position
 from levelup.position import Position
 
 class TestGameMap(TestCase):
@@ -18,7 +19,7 @@ class TestGameMap(TestCase):
         
         p2 = gm.calculate_position(5,5, Direction.NORTH)
         
-        p=Position(5,6)
+        p = Position(5, 6) 
         self.assertEqual(p2.y_pos,p.y_pos)
 
     def test_calculate_position_south(self):
@@ -48,4 +49,6 @@ class TestGameMap(TestCase):
 
     def test_is_position_valid (self):
         gm = GameMap(100)
-        self.assertEqual(gm.is_position_valid(Postion(-1,-1)), false)
+        ASSERT_FALSE=False
+        pos = Position(-1, -1)
+        self.assertEqual(gm.is_position_valid(pos.x_pos, pos.y_pos), ASSERT_FALSE)
