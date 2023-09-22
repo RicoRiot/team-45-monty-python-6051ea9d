@@ -21,9 +21,8 @@ class Character:
         self.current_position.y_pos = m.starting_position.y_pos
 
     def move(self, DIRECTION):
-        self.current_position=GameMap.calculate_position(self.current_position.x_pos, self.current_position.y_pos, DIRECTION)
+        self.current_position=GameMap.calculate_position(self.current_position.x_pos, self.current_position.y_pos, Direction.NORTH)
         move_count+=1
-
 
 
     

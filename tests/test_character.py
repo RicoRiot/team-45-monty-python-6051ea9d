@@ -37,7 +37,7 @@ class TestCharacterInitWithName(TestCase):
         expected_y_position=6
         expected_position=Position(expected_x_position, expected_y_position)
         expected_move_count=9
-        test_character.move("n")
+        test_character.move("NORTH")
         self.assertEqual(test_character.current_position.x_pos, expected_position.x_pos)
         self.assertEqual(test_character.current_position.y_pos, expected_position.y_pos)
 
