@@ -14,17 +14,17 @@ class GameMap:
     def get_positions(self):
         return self.all_positions
 
-    def calculate_position(self,x, y, direction):
+    def calculate_position(self,x, y, move_direction):
         p=Position(x,y)
         #p = {starting_position.x_pos, starting_position.y_pos}
-        
-        if direction ==Direction.NORTH:
+        print (move_direction)
+        if move_direction == "n": #Direction.NORTH:
             p.y_pos=p.y_pos+1
-        elif direction ==Direction.SOUTH:
+        elif move_direction ==Direction.SOUTH:
             p.y_pos=p.y_pos-1
-        elif direction ==Direction.EAST:
+        elif move_direction ==Direction.EAST:
             p.x_pos=p.x_pos+1
-        elif direction ==Direction.WEST:
+        elif move_direction ==Direction.WEST:
             p.x_pos=p.x_pos-1
         else:
             pass

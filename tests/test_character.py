@@ -2,6 +2,7 @@ from unittest import TestCase
 from levelup.character import Character
 from levelup.gamemap import GameMap
 from levelup.position import Position
+from levelup.controller import Direction
 
 class TestCharacterInitWithName(TestCase):
     def test_init(self):
@@ -37,7 +38,7 @@ class TestCharacterInitWithName(TestCase):
         expected_y_position=6
         expected_position=Position(expected_x_position, expected_y_position)
         expected_move_count=9
-        test_character.move("NORTH")
+        test_character.move("n")
         self.assertEqual(test_character.current_position.x_pos, expected_position.x_pos)
         self.assertEqual(test_character.current_position.y_pos, expected_position.y_pos)
 
