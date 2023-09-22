@@ -16,7 +16,7 @@ class TestGameMap(TestCase):
     def test_calculate_position_north(self):
         gm = GameMap(100)
         
-        p2 = gm.calculate_position(5,5, "n")
+        p2 = gm.calculate_position(5,5, Direction.NORTH)
         
         p = Position(5, 6) 
         self.assertEqual(p2.y_pos,p.y_pos)
