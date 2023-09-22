@@ -1,6 +1,7 @@
 from unittest import TestCase
 from levelup.character import Character
 from levelup.gamemap import GameMap
+from levelup.position import Position
 
 class TestCharacterInitWithName(TestCase):
     def test_init(self):
