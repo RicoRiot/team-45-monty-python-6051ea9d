@@ -1,5 +1,5 @@
 from levelup.position import Position
-from levelup.controller import Direction 
+from levelup.controller import Direction
 
 class GameMap:
     num_positions = 0
@@ -14,17 +14,17 @@ class GameMap:
     def get_positions(self):
         return self.all_positions
 
-    def calculate_position(self,x, y, Dir):
+    def calculate_position(self,x, y, direction):
         p=Position(x,y)
         #p = {starting_position.x_pos, starting_position.y_pos}
         
-        if Dir ==Direction.NORTH:
+        if direction ==Direction.NORTH:
             p.y_pos=p.y_pos+1
-        elif Dir ==Direction.SOUTH:
+        elif direction ==Direction.SOUTH:
             p.y_pos=p.y_pos-1
-        elif Dir ==Direction.EAST:
+        elif direction ==Direction.EAST:
             p.x_pos=p.x_pos+1
-        elif Dir ==Direction.WEST:
+        elif direction ==Direction.WEST:
             p.x_pos=p.x_pos-1
         else:
             pass
